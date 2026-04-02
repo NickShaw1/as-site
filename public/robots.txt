@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Only the home page is in the sitemap
+Sitemap: https://asaware.co.uk/sitemap.xml

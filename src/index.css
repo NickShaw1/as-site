@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-pink:    #F24B4B;
+  --color-brand-purple:  #A6215F;
+  --color-brand-navy:    #092126;
+  --color-brand-sand:    #F2BC57;
+  --color-brand-salmon:  #F28B50;
+}
+
+@keyframes siPulse  { 0%,100% { opacity: 0.45 } 50% { opacity: 1 } }
+@keyframes rayFade  { 0%,100% { opacity: 0.06 } 50% { opacity: 0.45 } }
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background-color: #ffffff;
+    font-family: 'Instrument Sans', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    color: #0B1C26;
+  }
+}
+
+@layer components {
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 900;
+    line-height: 1;
+    white-space: nowrap;
+    border-radius: 0.75rem;
+    padding: 0.625rem 1.25rem;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+    user-select: none;
+  }
+  .btn:hover  { transform: translateY(-2px) scale(1.02); }
+  .btn:active { transform: scale(0.96); }
+  .btn:focus-visible { outline: 2px solid #A6215F; outline-offset: 3px; }
+  .btn-lg { padding: 0.875rem 1.75rem; }
+  .btn-disabled {
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: 0.55;
+  }
+}
